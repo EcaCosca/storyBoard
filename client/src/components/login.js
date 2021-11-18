@@ -14,7 +14,7 @@ export default function Login() {
    
     const login = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:8080/users/login', {email: user.email, password: user.password})
+    axios.post('/users/login', {email: user.email, password: user.password})
         .then((res) => {           
             res.data? navigate("/tutorial") : setWrong(false)
         })

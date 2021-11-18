@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from "react-redux";
 // 2. Import store from its folder location.
 import store from "./reducers/store";
+import axios from "axios"
+axios.defaults.baseURL =process.env.NODE_ENV === "development" ? "http://localhost:8080/" : "/";
 
 ReactDOM.render(
   <React.StrictMode>

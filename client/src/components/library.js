@@ -11,7 +11,7 @@ export default function library() {
     }, [])
 
     React.useEffect(()=>{
-        axios.get('http://localhost:8080/library')
+        axios.get('/library')
         .then((res) => {
             setBooks(res.data)
         })

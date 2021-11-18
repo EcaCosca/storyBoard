@@ -15,7 +15,7 @@ export default function SignUp() {
 
     const sinup = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:8080/users', user)
+    axios.post('/users', user)
         .then((res) => {          
             res.data? navigate("/login") : setWrong(false)
         })

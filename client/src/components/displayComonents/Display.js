@@ -49,7 +49,7 @@ export default function Display() {
 
   const publish = (e) =>{
     e.preventDefault()
-    axios.post('http://localhost:8080/library', {pages: state.pages, title: user.title, userName: user.author})
+    axios.post('/library', {pages: state.pages, title: user.title, userName: user.author})
     .then((res) => {      
      res.data?  navigate("/library")  : setWrong(res.data)
     })

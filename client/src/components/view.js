@@ -27,14 +27,14 @@ export default function View() {
     let navigate = useNavigate();
 
     useEffect(()=>{
-        axios.get(`http://localhost:8080/library/${id}`)
+        axios.get(`/library/${id}`)
         .then((res) => {
             setPages(res.data[0].pages)
         })
-      }, []) 
+      }, [])
 
     const deleteBook = () =>{
-      axios.delete(`http://localhost:8080/library/${id}`)
+      axios.delete(`/library/${id}`)
       .then((res) => {
         navigate("/library")
       })

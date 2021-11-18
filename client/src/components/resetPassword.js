@@ -14,7 +14,7 @@ export default function ResetPassword() {
    
     const reset = (e) => {
     e.preventDefault()
-    axios.put('http://localhost:8080/users/', {email: user.email, password: user.password})
+    axios.put('/users/', {email: user.email, password: user.password})
         .then((res) => {  
             res.data? navigate("/tutorial") : setWrong(false)
         })
